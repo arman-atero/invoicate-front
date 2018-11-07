@@ -1,0 +1,286 @@
+<div fxFlex="11">
+  <app-sidebar></app-sidebar>
+</div>
+
+<div fxFlex="89">
+  <form [formGroup]="newInvoiceForm" (submit)="saveInvoice(newInvoiceForm)">
+    <div class="invoice-content">
+      <div class="invoice-wrapper">
+        <header class="header app_board_header">
+          <div class="max_width-header">
+            <h2>New Invoice</h2>
+            <div class="right-button" [matMenuTriggerFor]="menu">
+
+               <span>Save</span> <mat-icon>arrow_drop_down</mat-icon>
+
+            </div>
+            <mat-menu #menu="matMenu">
+              <ul class="header-drop-menu" style="padding: 0;">
+                <li mat-menu-item>
+                  <a>
+                    <mat-icon>list_alt</mat-icon>
+                    <button (click)="saveInvoice(newInvoiceForm)"
+                            style="border: none; background: none; font-size: 14px;">Invoice
+                    </button>
+                  </a>
+                </li>
+                <li mat-menu-item class="active">
+                  <mat-icon>payment</mat-icon>
+                  <span>Bill</span>
+                </li>
+                <li mat-menu-item class="clients">
+                  <mat-icon>people</mat-icon>
+                  <span>Client</span>
+                </li>
+              </ul>
+            </mat-menu>
+            <div class="right-button1">
+              <button>Save Draft</button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="invoice-desk">
+        <div class="front-board" fxFlex="70">
+          <div fxLayout="row">
+            <div fxFlex="50">
+              <div class="draft">
+                <span>Draft</span>
+              </div>
+              <div class="input">
+                <mat-form-field class="example-full-width">
+                  <input fxFlex="80" formControlName="title" matInput placeholder="Invoice Name"/>
+                </mat-form-field>
+              </div>
+              <div class="textarea-part">
+                <textarea formControlName="description" ng-model="myTextarea"
+                          placeholder="Add Description..."></textarea>
+              </div>
+            </div>
+            <div class="img-upload" fxFlex="50" fxLayoutAlign="end end">
+              <div class="div-upload" fxFlex="40" fxLayoutAlign="end end" style="position: relative;">
+                <img [src]="url" height="200"> <br/>
+                <input formControlName="imgs" type='file' (change)="onSelectFile($event)">
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row" class="second-board">
+            <div fxFlex="30">
+              <div class="form_row_invoice">
+                <div class="form_heading"><label>Invoice No.</label></div>
+                <span class="input_addon">#</span>
+                <input formControlName="statmentNum" class="no_border_radius_left" type="text" value="INV-1">
+              </div>
+            </div>
+            <div fxFlex="70">
+              <div fxLayout="row">
+                <div fxFlex="50" fxLayoutAlign="end end">
+                  <div class="form_row_invoice">
+                    <div class="form_heading"><label>Language</label></div>
+                    <mat-form-field>
+                      <select matNativeControl formControlName="language">
+                        <option selected="" value="en-us">English (US)</option>
+                        <option value="en-uk">English (UK)</option>
+                        <option value="zh">Chinese</option>
+                        <option value="cs">Czech</option>
+                        <option value="da">Danish</option>
+                        <option value="nl">Dutch</option>
+                        <option value="et">Estonian</option>
+                        <option value="fil">Filipino</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                      </select>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div fxFlex="50" fxLayoutAlign="end end">
+                  <div class="form_row_invoice">
+                    <div class="form_heading"><label>Currency</label></div>
+                    <mat-form-field>
+                      <select matNativeControl formControlName="currency">
+                        <option value="eur">Euro - EUR</option>
+                        <option value="gbp">British Pound - GBP</option>
+                        <option value="aud">Australian Dollar - AUD</option>
+                        <option value="cad">Canadian Dollar - CAD</option>
+                        <option value="chf">Swiss Franc - CHF</option>
+                        <option value="czk">Czech Koruna - CZK</option>
+                        <option value="dkk">Danish Krone - DKK</option>
+                        <option value="hkd">Hong Kong Dollar - HKD</option>
+                        <option value="huf">Hungarian Forint - HUF</option>
+                      </select>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row" class="third-board">
+            <div fxFlex="30">
+              <div fxFlex="50" class="account-data">
+                <span class="to"><strong>From</strong></span>
+                <span class="to">AteroSolutions</span>
+                <span class="to">Torosyan</span>
+                <span class="to">Lori, Spitak</span>
+                <span class="to">Armenia</span>
+                <span class="from"><strong>To</strong></span>
+                <a fxLayoutAlign="end end" href="">New Client</a>
+                <div fxLayout="column" fxLayoutAlign="space-between start" class="width100">
+                  <div class="width100">
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="clientname" matInput placeholder="Enter Client Name"/>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="row" fxFlex="50" class="edit_profile" fxLayoutAlign="end start">
+                <a href="">Edit Business Profile</a>
+              </div>
+            </div>
+            <div fxFlex="40"></div>
+            <div fxFlex="30" class="right-third-board">
+              <div fxLayout="column" fxLayoutAlign="space-between center">
+                <mat-form-field>
+                  <input formControlName="datepicker" matInput [matDatepicker]="picker" placeholder="Choose a date">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                  <select matNativeControl formControlName="invoicedue" placeholder="Invoice Due">
+                    <option selected="" value="0">Invoice Due</option>
+                    <option value="7">After 7 days</option>
+                    <option value="15">After 15 days</option>
+                    <option value="30">After 30 days</option>
+                    <option value="45">After 45 days</option>
+                    <option value="60">After 60 days</option>
+                    <option value="custom">Custom</option>
+                  </select>
+                </mat-form-field>
+                <div fxFlex="100" class="width100">
+                  <mat-form-field class="example-full-width">
+                    <input formControlName="purchase" matInput placeholder="Purchase Order Number"/>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div formArrayName="items">
+            <div fxLayout="row" style="border-bottom: 2px solid #e7e7e7; padding-bottom: 20px;">
+              <div fxFlex="35" class="width100" fxLayout="row" fxLayoutAlign="start center">
+                  <label>Description</label>
+              </div>
+              <div fxFlex="14" class="width100" fxLayout="row" fxLayoutAlign="center center">
+                <label>Quantity</label>
+              </div>
+              <div fxFlex="14" class="width100" fxLayout="row" fxLayoutAlign="center center">
+                <label>Rate</label>
+              </div>
+              <div fxFlex="20" class="width100" fxLayout="row" fxLayoutAlign="center center">
+                <label>Amount</label>
+              </div>
+              <div fxFlex="10" class="width100"></div>
+            </div>
+            <div *ngFor="let item of newInvoiceForm.controls['items'].controls; let i = index"
+                [formGroupName]="i" class="fourteen-board" fxLayout="row">
+              <div fxFlex="45">
+                <div class="description">
+                  <!--<label>Description</label>-->
+                  <div class="textarea-part inline-block">
+                    <textarea formControlName="descriptions" ng-model="myTextarea"
+                              placeholder="Item name & Description" value="{{item.controls['link'].value}}{{item.controls['address'].value}}">
+
+                    </textarea>
+                    <span class="indesc" *ngIf="item.controls['datTime'].value">{{item.controls['datTime'].value | amDateFormat:'MMM DD YY'}}
+                      <p (click)="item.controls['datTime'].value=''">x</p>
+                    </span>
+                    <!--<span class="linkaddress" *ngIf="item.controls['link'].value && item.controls['address'].value"></span>-->
+                    <div class="desc-bottom1">
+                      <!--<span matTooltip="Date">-->
+                        <!--<mat-icon>date_range</mat-icon>-->
+                      <!--</span>-->
+                      <mat-form-field>
+                        <input matInput [matDatepicker]="picker" formControlName="datTime"  placeholder="Choose a date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                      <span mat-icon-button  [matMenuTriggerFor]="menulink" matTooltip="Link">
+                        <mat-icon>link</mat-icon>
+                      </span>
+                      <mat-menu #menulink="matMenu">
+                        <ul class="link-drop-menu" style="padding: 0;">
+                          <li>
+                            <label>Text To Display</label>
+                            <mat-form-field class="example-full-width">
+                              <input (click)="stopPropagation($event)" formControlName="link" matInput placeholder="This is a link">
+                            </mat-form-field>
+                          </li>
+                          <li>
+                            <label>Link URL</label>
+                            <mat-form-field class="example-full-width">
+                              <input (click)="stopPropagation($event)" formControlName="address" matInput placeholder="http://">
+                            </mat-form-field>
+                          </li>
+                          <div class="form_row" style="margin-top: 14px;">
+                            <span>Add Link</span>
+                          </div>
+                        </ul>
+                      </mat-menu>
+                      <span matTooltip="Tag">
+                        <mat-icon>how_to_vote</mat-icon>
+                      </span>
+                    </div>
+                    <div class="desc-bottom2">
+                      <span matTooltip="Tax">
+                        <mat-icon>attach_money</mat-icon>
+                      </span>
+                      <span matTooltip="Discount">
+                        <mat-icon>account_balance_wallet</mat-icon>
+                      </span>
+                      <span matTooltip="Shipping">
+                        <mat-icon>shopping_basket</mat-icon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div fxFlex="75" fxLayoutAlign="space-around center">
+                <div class="line-options">
+                  <div fxFlex="25" class="width100">
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="quantity" matInput placeholder="12"/>
+                    </mat-form-field>
+                  </div>
+                  <div fxFlex="25" class="width100">
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="rate" matInput placeholder="0.00"/>
+                    </mat-form-field>
+                  </div>
+                  <div fxFlex="30" class="width100">
+                    <mat-form-field class="example-full-width">
+                      <span class="curency-val">{{newInvoiceForm.controls['currency'].value}}</span>
+                      <input formControlName="amount" matInput vaue="0.00"/>
+                    </mat-form-field>
+                  </div>
+                  <div fxFlex="15" class="width100">
+                  <span class="settings"><mat-icon>settings</mat-icon>
+                    <span mat-icon-button [matMenuTriggerFor]="menuline">
+                    <mat-icon>arrow_drop_down</mat-icon>
+                  </span>
+                    <mat-menu #menuline="matMenu">
+                      <ul class="header-drop-menu" style="padding: 0;">
+                        <li *ngIf="i > 0" mat-menu-item (click)="deleteItem(i)">Delete</li>
+                      </ul>
+                    </mat-menu>
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span (click)="addItem()" class="new_line">New Line</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

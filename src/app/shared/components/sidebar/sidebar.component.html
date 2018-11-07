@@ -1,0 +1,121 @@
+<div class="sidebar-wrapper">
+  <div class="dropdown-menus" fxLayoutAlign="center center">
+    <img src="assets/img/invoicely-icon.png">
+    <span>Web</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+  </div>
+  <mat-menu #menu="matMenu">
+    <ul class="drop-menu">
+      <li mat-menu-item>
+        <a href="">
+          <span>Exit Business</span>
+        </a>
+      </li>
+      <li mat-menu-item class="active">
+        <a href="">
+          <span>Loged in as: Arman</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>https</mat-icon>
+          <span>Account</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>star_rate</mat-icon>
+          <span>Subscribtion</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>payment</mat-icon>
+          <span>Billing</span>
+        </a>
+      </li>
+      <li mat-menu-item class="logout">
+        <a href="">
+          <mat-icon>power_settings_new</mat-icon>
+          <span>Log Out</span>
+        </a>
+      </li>
+    </ul>
+  </mat-menu>
+  <div class="second-part-sidebar">
+    <div class="upgrade" fxLayoutAlign="center center" fxLayout="column">
+      <a class="invoic-title">invoicely</a>
+      <a class="upgrade-button" href="">Upgrade</a>
+    </div>
+  </div>
+  <div class="third-part-sidebar">
+    <ul>
+      <li mat-menu-item class="active">
+        <a href="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a [routerLink]="['/reports']">
+          <mat-icon>report</mat-icon>
+          <span>Reports</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a [routerLink]="['/invoice']">
+          <mat-icon>list_alt</mat-icon>
+          <span>Invoices</span>
+        </a>
+        <a [routerLink]="['/invoice/new']">
+          <span class="plus">+</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a [routerLink]="['/bills/new']">
+          <mat-icon>payment</mat-icon>
+          <span>Bills</span>
+          <span class="plus">+</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>spellcheck</mat-icon>
+          <span>Estimates</span>
+          <span class="bolt"><mat-icon>show_chart</mat-icon></span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>access_alarm</mat-icon>
+          <span>Track</span>
+          <span class="bolt"><mat-icon>show_chart</mat-icon></span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>people</mat-icon>
+          <span>Clients</span>
+        </a>
+      </li>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>settings</mat-icon>
+          <span>Business Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="help-part">
+    <ul>
+      <li mat-menu-item>
+        <a href="">
+          <mat-icon>help_outline</mat-icon>
+          <span>Help Center</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

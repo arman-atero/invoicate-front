@@ -1,0 +1,441 @@
+@import "../../../../vars";
+.invoice-content {
+  background: #f3f3f4;
+}
+
+.invoice-wrapper {
+  width: 100%;
+}
+
+.invoice-wrapper .invoice-desk {
+  margin-top: 65px;
+}
+
+.invoice-wrapper .header {
+  position: fixed;
+  left: 210px;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  border-bottom: 1px solid #e1e1e1 !important;
+  background: #fff !important;
+  box-shadow: 0 1px 0 0 #e8e8e9;
+  padding: 15px 0 15px;
+}
+
+.invoice-wrapper .max_width-header h2 {
+  display: inline-block;
+  font-weight: 400;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+
+.invoice-wrapper .header .right-button {
+  width: 100px;
+  float: right;
+  margin-top: 12px;
+  background: $accent;
+  font-weight: 400;
+  padding: 3px 15px;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border: none;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  span {
+    line-height: 1;
+    display: inline-block;
+    margin-top: -5px;
+  }
+}
+
+.invoice-wrapper .header .right-button1 {
+  float: right;
+}
+
+.invoice-wrapper .header .right-button1 button {
+  background: rgba(0, 0, 0, 0.27);
+  padding: 5px 15px;
+  color: #fff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+
+.invoice-content .invoice-desk {
+  padding-top: 110px;
+  margin-left: 30px;
+}
+
+.invoice-content .invoice-desk .front-board {
+  position: relative;
+  background: #FFF;
+  border: 1px solid #d7d7d9;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 0;
+  border: 2px solid #d7d7d9;
+  padding: 50px;
+}
+
+.invoice-content .invoice-desk .front-board .draft {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: inherit;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  text-transform: capitalize;
+  vertical-align: top;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 2px;
+  background: #a1a1a1;
+  float: left;
+}
+
+.invoice-content .invoice-desk .front-board .draft span {
+  color: #fff;
+  font-weight: 400;
+  padding: 7px 10px;
+  font-size: 20px;
+}
+
+.invoice-content .invoice-desk .front-board .input {
+  display: inline-block;
+}
+
+
+.invoice-content .invoice-desk .front-board .img-upload img {
+  width: 100px;
+  height: 100px;
+}
+
+.invoice-content .invoice-desk .front-board .img-upload .div-upload {
+  padding: 10px;
+}
+
+.invoice-content .invoice-desk .front-board .img-upload .div-upload input {
+  position: absolute;
+  width: 179px;
+  height: 120px;
+  opacity: 0;
+}
+
+.invoice-content .invoice-desk .front-board .img-upload .div-upload:hover {
+  border: 2px dashed #d7d7d9;
+}
+
+.invoice-content .invoice-desk .front-board .textarea-part {
+  margin-top: 20px;
+}
+
+.invoice-content .invoice-desk .front-board .textarea-part textarea {
+  width: 91%;
+  border: 2px solid #d7d7d9;
+  background: transparent;
+  height: 65px;
+  font-size: 14px;
+  padding: 10px;
+  color: #a1a1a1;
+  resize: vertical;
+}
+.invoice-content .invoice-desk .front-board .inline-block{
+  //display: inline-block;
+}
+.invoice-content .invoice-desk .front-board .inline-block span{
+  cursor: pointer;
+  background: #f3f3f4;
+  width: 30px;
+  height: 30px;
+  padding: 0px 3px;
+  color: #666;
+  display: inline-block;
+  padding-top: 3px;
+  position: relative;
+  border-radius: 999px;
+  margin-top: 4px;
+  text-align: center;
+  border: 2px solid #d7d7d9;
+  margin-right: 10px;
+}
+::ng-deep .invoice-content .description .mat-button-wrapper{
+  cursor: pointer;
+  background: #f3f3f4;
+  width: 30px;
+  height: 30px;
+  padding: 0px 3px;
+  color: #666;
+  display: inline-block;
+  padding-top: 3px;
+  position: relative;
+  border-radius: 999px;
+  margin-top: 4px;
+  text-align: center;
+  border: 2px solid #d7d7d9;
+  margin-right: 10px;
+}
+::ng-deep .invoice-content .description .mat-form-field-infix{
+  display: none;
+}
+.invoice-content .description .indesc{
+  position: absolute !important;
+  bottom: 180px;
+  width: 100px !important;
+  height: 23px !important;
+  z-index: 999;
+  left: 55px;
+  color: #fff !important;
+  background: rgba(43, 161, 225, .95) !important;
+  border: 1px solid #2BA1E1 !important;
+  border-radius: 2px !important;
+  line-height: 20px !important;
+  text-align: left !important;
+  padding-left: 10px !important;
+  cursor: text !important;
+}
+.invoice-content .description .indesc p{
+  display: inline-block;
+  margin: 0;
+  padding-left: 7px;
+  background: #fff;
+  color: #000;
+  height: 8px;
+  line-height: 6px;
+  font-size: 13px;
+  padding: 3px;
+  border-radius: 10px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+::ng-deep .invoice-content .description .mat-form-field-subscript-wrapper{
+  display: none;
+}
+::ng-deep .invoice-content .description .mat-form-field-underline{
+  display: none;
+}
+::ng-deep .invoice-content .description .mat-button-focus-overlay{
+  background: none;
+}
+::ng-deep .invoice-content .description .mat-form-field{
+  float: left;
+  width: 50px;
+}
+.invoice-content .invoice-desk .front-board .inline-block .desc-bottom1{
+  display: inline-block;
+}
+.invoice-content .invoice-desk .front-board .inline-block .desc-bottom2{
+  float: right;
+  display: inline-block;
+}
+.invoice-content .invoice-desk .front-board .form_row_invoice {
+  height: 54px;
+  margin-top: 40px;
+}
+
+.invoice-content .invoice-desk .front-board .form_row_invoice .form_heading {
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.invoice-content .invoice-desk .front-board .form_row_invoice .input_addon {
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  width: 30px;
+  padding-top: 5px;
+  display: inline-block;
+  color: #555;
+  line-height: 25px;
+  text-align: center;
+  margin-right: -5px;
+  white-space: nowrap;
+  vertical-align: bottom;
+  background: #d7d7d9;
+  border: 2px solid #d7d7d9;
+  border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+}
+
+.invoice-content .invoice-desk .front-board .form_row_invoice .no_border_radius_left {
+  padding: 0 5px;
+  outline: none;
+  font-weight: 400;
+  height: 35px;
+  -webkit-appearance: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  border: 2px solid #d7d7d9;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.invoice-content .invoice-desk .second-board {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.invoice-content .invoice-desk .third-board {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.invoice-content .invoice-desk .third-board .account-data .to {
+  display: block;
+}
+
+.invoice-content .invoice-desk .third-board .account-data .from {
+  display: inline-block;
+  float: left;
+  margin-bottom: 5px;
+}
+
+.invoice-content .invoice-desk .third-board .account-data a {
+  color: $text-links;
+  font-size: 14px;
+  text-decoration: none;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.invoice-content .invoice-desk .third-board .edit_profile a {
+  color: $text-links;
+  font-size: 14px;
+  text-decoration: none;
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.invoice-content .invoice-desk .third-board .account-data .width100 {
+  width: 100%;
+}
+
+.width100 {
+  padding: 0 10px;
+}
+
+.header-drop-menu {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.invoice-content .invoice-desk .third-board .account-data .to {
+  margin: 6px 0;
+}
+
+.invoice-content .invoice-desk .third-board .right-third-board label {
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: "pn-sb", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+
+.invoice-content .invoice-desk .fourteen-board label {
+  display: block;
+}
+
+.invoice-content .invoice-desk .fourteen-board .line-options .settings {
+  padding: 3px 5px;
+  display: inline-block;
+  background: #f3f3f4;
+  border: 3px solid #e7e7e7;
+}
+.invoice-content .invoice-desk .fourteen-board .line-options input{
+  position: relative;
+  padding-left: 40px;
+}
+.invoice-content .invoice-desk .fourteen-board .line-options .curency-val{
+  position: absolute;
+  text-transform: uppercase;
+}
+.invoice-content .invoice-desk .fourteen-board .line-options label {
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.invoice-content .invoice-desk .fourteen-board .description label {
+  font-family:  "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.invoice-content .invoice-desk .fourteen-board .line-options .mat-form-field {
+  display: block;
+}
+
+.invoice-content .invoice-desk .fourteen-board {
+  padding: 30px 0;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.new_line {
+  padding: 8px;
+  background: #747d9d;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+}
+.link-drop-menu{
+  padding: 10px !important;
+  margin: 0;
+  list-style: none;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(75, 75, 87, .2);
+  border: 2px solid #c1c1c1;
+  text-align: left;
+}
+.link-drop-menu label{
+  font-weight: bold;
+  font-size: 14px !important;
+}
+.link-drop-menu .form_row span{
+  padding: 2px 10px 0;
+  height: 27px;
+  display: inline-block;
+  border: none;
+  color: #fff;
+  background: #747d9d;
+  cursor: pointer;
+  border-radius: 3px;
+  line-height: 25px;
+  font-size: 14px;
+}
+::ng-deep .link-drop-menu .mat-form-field-underline{
+  display: none;
+}
+::ng-deep .link-drop-menu .mat-form-field-infix{
+  border: 2px solid #d7d7d9;
+  margin-top: 15px;
+}
+.invoice-content .description .linkaddress{
+  position: absolute !important;
+  left: 57px;
+  width: 170px !important;
+  border-radius: 3px !important;
+
+}

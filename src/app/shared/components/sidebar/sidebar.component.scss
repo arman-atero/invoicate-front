@@ -1,0 +1,165 @@
+@import "../../../../vars";
+.sidebar-wrapper{
+  position: fixed;
+  width: 210px;
+}
+.sidebar-wrapper .dropdown-menus img{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.sidebar-wrapper .dropdown-menus{
+  height: 5vh;
+  font-size: 14px;
+  color: #fff;
+  padding: 25px 0;
+  background: #000;
+  font-family: "pn-r", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+.sidebar-wrapper .second-part-sidebar .upgrade .upgrade-button{
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: 35px auto;
+  padding: 10px 0;
+  font-size: 15px;
+  border-radius: 2px;
+  background: $accent;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, .2);
+  font-family: "pn-r", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+.sidebar-wrapper .second-part-sidebar .upgrade{
+  background: $sidebar;
+}
+.sidebar-wrapper .second-part-sidebar .upgrade .invoic-title{
+  color: #fff;
+  font-size: 35px;
+  margin: 35px auto 0;
+  font-family: "pn-r", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+.sidebar-wrapper .third-part-sidebar{
+  background: $sidebar;
+  height: calc(100vh - 292px);
+}
+.sidebar-wrapper .third-part-sidebar .mat-menu-item:hover{
+  background: $sidebar-dark;
+}
+.sidebar-wrapper .third-part-sidebar ul{
+  padding: 0;
+  width: 100%;
+  margin-top: 0;
+}
+.sidebar-wrapper .third-part-sidebar ul li a{
+  text-decoration: none;
+}
+.sidebar-wrapper .third-part-sidebar ul li.active{
+  background: $sidebar-darker;
+}
+.sidebar-wrapper .third-part-sidebar ul li a{
+  color: #fff;
+}
+.sidebar-wrapper .help-part{
+  background: $sidebar-darker;
+}
+.sidebar-wrapper .help-part ul{
+  background: rgba(0,0,0,0.25);
+}
+.sidebar-wrapper .help-part ul li a mat-icon{
+  color: #fff;
+}
+.sidebar-wrapper .help-part ul{
+  padding: 0;
+  width: 100%;
+  margin-top: 0;
+}
+.sidebar-wrapper .help-part ul li a{
+  text-decoration: none;
+}
+.sidebar-wrapper .help-part ul li:hover{
+  background: rgba(0, 0, 0, 0);
+}
+.sidebar-wrapper .help-part ul li a{
+  color: #fff;
+}
+.sidebar-wrapper .third-part-sidebar ul li a mat-icon{
+  color: #fff;
+}
+.sidebar-wrapper .third-part-sidebar ul li {
+  padding-right: 0;
+}
+.sidebar-wrapper .third-part-sidebar .plus{
+  float: right;
+  color: #fff;
+  font-size: 18px;
+  display: none;
+}
+.sidebar-wrapper .third-part-sidebar ul li:hover .plus{
+  display: inline-block;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, .25);
+}
+.sidebar-wrapper .third-part-sidebar .bolt{
+  float: right;
+  display: none;
+}
+.sidebar-wrapper .third-part-sidebar ul li:hover .bolt{
+  display: inline-block;
+  padding: 0 15px;
+  background: rgba(0, 0, 0, .25);
+}
+.sidebar-wrapper .third-part-sidebar .bolt mat-icon{
+  margin-right: 0;
+}
+::ng-deep .mat-menu-panel{
+  border-radius: 0 !important;
+  position: relative;
+  /*left: -114px;*/
+  width: 208px;
+}
+::ng-deep .mat-menu-panel .mat-menu-content{
+  padding: 0 !important;
+}
+::ng-deep .mat-menu-panel .mat-menu-content a{
+  display: block;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu{
+  padding: 0;
+  margin: 0;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu li{
+  background: #e1e1e2;
+  padding: 0;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding: 0 22px;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu li a{
+  color: #333;
+  text-decoration: none;
+  font-family: "pn-r", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-size: 16px;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu .active{
+  font-size: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding: 0 22px;
+  background: rgba(0, 0, 0, .2);
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu li:hover{
+  background: rgba(0, 0, 0, .2);
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu .logout{
+  border-top-color: #e35256;
+  background: #e35256;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu .logout a{
+  color: #fff;
+  color: #fff;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu .logout mat-icon{
+  color: #fff;
+}
+::ng-deep .mat-menu-panel .mat-menu-content .drop-menu .logout:hover{
+  background: #e35256;
+}
