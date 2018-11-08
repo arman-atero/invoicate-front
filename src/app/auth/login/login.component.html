@@ -1,0 +1,29 @@
+<div class="login-page-wrapper" fxLayoutAlign="center center" fxLayout="column">
+  <div class="login-title" fxLayoutAlign="center center">
+    <h2>invoicely</h2>
+  </div>
+  <div fxLayoutAlign="center center">
+    <div class="login-form-wrapper">
+      <h2>Login to your account</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)" fxLayout="column">
+        <div class="inputs">
+          <label>Email Address</label>
+          <input matInput type="text" placeholder="User Email" formControlName="username">
+          <label fxLayoutAlign="space-between">Password
+            <a routerLink="/password/forgot" class="" title="Recover Password">Forgot Password</a>
+          </label>
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <div fxLayoutAlign="center" class="login-button">
+            <button class="button">Log in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="member-title" fxLayoutAlign="center center" fxLayout="column">
+    <h4>Not a member yet?</h4>
+    <div fxLayoutAlign="center" class="login-button">
+      <a routerLink="/register">Start invoicing now</a>
+    </div>
+  </div>
+</div>
