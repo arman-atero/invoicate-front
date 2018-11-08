@@ -1,0 +1,129 @@
+.text-center{
+    text-align: center;
+}
+.register{
+    height: 100vh;
+    background: #363B4D;
+}
+.register .register-title h2{
+    color: #fff;
+    font-size: 28px;
+    font-style: italic;
+}
+.register .register-title p{
+    margin: 15px 0px 25px;
+    font-size: 36px;
+    color: #fff;
+}
+.register .register-title span{
+    font-size: 18px;
+    color: #fff;
+} 
+.example-full-width {
+    width: 100%;
+}
+.register-signup ::ng-deep .mat-step-header{
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background: #363B4D;
+    border-radius: 3px;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 15px;
+    height: 25px;
+    width: 120px;
+    padding: 5px;
+}
+.register-form .register-private mat-form-field{
+    width: 47%;
+    outline: 0px;
+}
+.register-form  mat-form-field{
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
+    color: #666;
+}
+.register-form .register-left{
+    border-right: 1px solid #e7e7e7;
+    padding-right: 28px;
+    margin-right: 17px;
+}
+.back,
+.next{
+    display: inline-block;
+    padding: 0 10px;
+    background: rgba(0,0,0,.1);
+    color: inherit;
+    border-radius: 3px;
+    min-width: 76px;
+    font-weight: 500;
+    border: none;
+}
+.next{
+    background: #ff6633;
+    color: #fff;
+}
+.already-member{
+    margin-top: 25px;
+}
+.set-up{
+    max-width: 380px;
+    margin: auto;
+}
+.already-member p{
+    color: #fff;
+}
+.already-member button {
+    background: rgba(0,0,0,.25);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 15px;
+}
+.term-use a{
+    text-decoration: none;
+    color: #2676a5;
+
+}
+.register-form .register-private .register-form-field{
+    margin-right: 35px;
+}
+.register-signup ::ng-deep [aria-selected="true"]{
+    background: rgba(255, 255, 255, .2);
+    opacity: 1;
+}
+.register-signup ::ng-deep .mat-stepper-horizontal-line{
+    background: #fff;
+    margin: 0;
+    height: 2px;
+}
+.register-signup ::ng-deep .mat-step-icon-state-number,
+.register-signup ::ng-deep .mat-step-icon
+{
+    display: none;
+}
+.register-signup ::ng-deep .mat-step-label{
+    margin: auto;
+    color: #fff;
+}
+.register-signup ::ng-deep .mat-stepper-horizontal{
+    background: transparent;
+    margin: 17px 0;
+}
+.register-form{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+    background: #f3f3f4;
+    padding: 30px;
+}
+.register-signup .register-inputs label{
+    color: #6a6a6a;
+}

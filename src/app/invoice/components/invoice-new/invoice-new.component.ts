@@ -37,26 +37,28 @@ export class InvoiceNewComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private invoiceService: InvoiceService) { }
+    private invoiceService: InvoiceService) {
+  }
 
   ngOnInit() {
     this.newInvoiceForm = this.fb.group({
       title: ['', Validators.required],
       description: [''],
       statmentNum: [''],
-      currency:    ['eur', Validators.required],
-      language:    ['en-uk', Validators.required],
-      imgs:        [''],
-      clientname:  ['', Validators.required],
-      datepicker:  ['', Validators.required],
-      invoicedue:  ['', Validators.required],
-      purchase:    [''],
+      currency: ['eur', Validators.required],
+      language: ['en-uk', Validators.required],
+      imgs: [''],
+      clientname: ['', Validators.required],
+      datepicker: ['', Validators.required],
+      invoicedue: ['', Validators.required],
+      purchase: [''],
 
-      items: this.fb.array([ this.createItem() ]),
+      items: this.fb.array([this.createItem()]),
       // items: this.fb.array([ this.createLink() ])
     });
 
   }
+
   // createLink(): FormGroup {
   //   return this.fb.group({
   //     link:         ['', Validators.required],
@@ -66,33 +68,34 @@ export class InvoiceNewComponent implements OnInit {
   createItem(): FormGroup {
     return this.fb.group({
       descriptions: [''],
-      quantity:     ['', Validators.required],
-      rate:         ['', Validators.required],
-      amount:       ['', Validators.required],
-      datTime:      [''],
-      link:         ['', Validators.required],
-      address:      ['', Validators.required],
-      tag:          ['', Validators.required]
+      quantity: ['', Validators.required],
+      rate: ['', Validators.required],
+      amount: ['', Validators.required],
+      datTime: [''],
+      link: ['', Validators.required],
+      address: ['', Validators.required],
+      tag: ['', Validators.required]
     });
   }
 
   addItem(): void {
     this.items = this.newInvoiceForm.get('items') as FormArray;
     this.items.push(this.createItem());
-   }
+  }
+
 //   addLink(): void {
 //     this.items = this.newInvoiceForm.get('items') as FormArray;
 //     this.items.push(this.createLink());
 // }
   saveInvoice(f) {
     console.log(f.value);
-    if ( this.newInvoiceForm.valid) {
-      this.invoiceService.saveInvoice(this.newInvoiceForm.value).subscribe( invoice => {
+    if (this.newInvoiceForm.valid) {
+      this.invoiceService.saveInvoice(this.newInvoiceForm.value).subscribe(invoice => {
         console.log(invoice);
       });
     }
-
   }
+
   onSelectFile(event) { // called each time file input changes
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();
@@ -108,8 +111,9 @@ export class InvoiceNewComponent implements OnInit {
   deleteItem(i) {
     // this.items = this.items as Array,;
     this.items.removeAt(i);
-   }
-  stopPropagation(event){
+  }
+
+  stopPropagation(event) {
     event.stopPropagation();
   }
 }
