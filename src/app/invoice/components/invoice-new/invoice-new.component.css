@@ -172,7 +172,7 @@
 .invoice-content .description .indesc {
   position: absolute !important;
   bottom: 180px;
-  width: 100px !important;
+  width: auto !important;
   height: 23px !important;
   z-index: 999;
   left: 55px;
@@ -392,5 +392,45 @@
   left: 57px;
   width: 170px !important;
   border-radius: 3px !important; }
+
+.link-drop-menu .form_row p {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px; }
+
+::ng-deep .link-drop-menu .mat-checkbox-label {
+  font-size: 13px; }
+
+.invoice-content .description .indesctag {
+  position: absolute !important;
+  bottom: 180px;
+  width: auto !important;
+  height: 23px !important;
+  z-index: 999;
+  left: 180px;
+  color: #fff !important;
+  background: #ff8000 !important;
+  border: 1px solid #ff8000 !important;
+  border-radius: 2px !important;
+  line-height: 20px !important;
+  text-align: left !important;
+  padding-left: 10px !important;
+  cursor: text !important; }
+
+.invoice-content .description .indesctag p {
+  display: inline-block;
+  margin: 0;
+  padding-left: 7px;
+  background: #fff;
+  color: #000;
+  height: 8px;
+  line-height: 6px;
+  font-size: 13px;
+  padding: 3px;
+  border-radius: 10px;
+  margin-left: 6px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=invoice-new.component.css.map */

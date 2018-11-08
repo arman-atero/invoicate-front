@@ -72,8 +72,7 @@ export class InvoiceNewComponent implements OnInit {
       datTime:      [''],
       link:         ['', Validators.required],
       address:      ['', Validators.required],
-      link:         ['', Validators.required],
-      address:      ['', Validators.required],
+      tag:          ['', Validators.required]
     });
   }
 
