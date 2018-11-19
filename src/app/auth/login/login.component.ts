@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../core/services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,10 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(
-    public router: Router,
-    private authService: AuthService,
-  ) { }
+  constructor(public router: Router, private authService: AuthService) {}
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -23,18 +20,15 @@ export class LoginComponent implements OnInit {
 
   login(val) {
     if (this.loginForm.valid) {
-      let pass = val.controls['password'].value;
-      let userName = val.controls['username'].value;
+      const pass = val.controls['password'].value;
+      const userName = val.controls['username'].value;
       console.log(val.value);
-      localStorage.setItem('user', 'invToken')
-      this.router.navigate(['invoice/new'])
+      this.router.navigate(['invoice/new']);
       this.authService.signInUser(pass, userName).subscribe(res => {
-        localStorage.setItem('user', '')
+        localStorage.setItem('user', 'test');
         console.log(res);
-        this.router.navigate(['invoice/new'])
-      })
-
+        this.router.navigate(['invoice/new']);
+      });
     }
   }
-
 }

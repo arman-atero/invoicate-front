@@ -1,11 +1,14 @@
 .invoice-content {
-  background: #f3f3f4; }
+  background: #f3f3f4;
+}
 
 .invoice-wrapper {
-  width: 100%; }
+  width: 100%;
+}
 
 .invoice-wrapper .invoice-desk {
-  margin-top: 65px; }
+  margin-top: 65px;
+}
 
 .invoice-wrapper .header {
   position: fixed;
@@ -18,12 +21,15 @@
   border-bottom: 1px solid #e1e1e1 !important;
   background: #fff !important;
   box-shadow: 0 1px 0 0 #e8e8e9;
-  padding: 15px 0 15px; }
+  padding: 15px 0 15px;
+}
 
 .invoice-wrapper .max_width-header h2 {
   display: inline-block;
-  font-weight: 400;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif; }
+  font-weight: 600;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
+}
 
 .invoice-wrapper .header .right-button {
   width: 100px;
@@ -42,36 +48,44 @@
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border: none;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif; }
-  .invoice-wrapper .header .right-button span {
-    line-height: 1;
-    display: inline-block;
-    margin-top: -5px; }
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
+}
+.invoice-wrapper .header .right-button span {
+  line-height: 1;
+  display: inline-block;
+  margin-top: -5px;
+}
 
 .invoice-wrapper .header .right-button1 {
-  float: right; }
+  float: right;
+}
 
 .invoice-wrapper .header .right-button1 button {
   background: rgba(0, 0, 0, 0.27);
-  padding: 5px 15px;
+  padding: 4px 15px;
   color: #fff;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 12px;
   margin-right: 15px;
   cursor: pointer;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif; }
+  border: none;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
+}
 
 .invoice-content .invoice-desk {
   padding-top: 110px;
-  margin-left: 30px; }
+  margin-left: 30px;
+}
 
 .invoice-content .invoice-desk .front-board {
   position: relative;
-  background: #FFF;
+  background: #fff;
   border: 1px solid #d7d7d9;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -80,13 +94,16 @@
   -moz-border-radius: 3px;
   padding: 0;
   border: 2px solid #d7d7d9;
-  padding: 50px; }
+  padding: 50px;
+  margin-bottom: 35px;
+}
 
 .invoice-content .invoice-desk .front-board .draft {
   display: inline-block;
   margin-right: 10px;
   font-size: inherit;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
   text-transform: capitalize;
   vertical-align: top;
   height: 35px;
@@ -94,35 +111,43 @@
   line-height: 35px;
   border-radius: 2px;
   background: #a1a1a1;
-  float: left; }
+  float: left;
+}
 
 .invoice-content .invoice-desk .front-board .draft span {
   color: #fff;
   font-weight: 400;
   padding: 7px 10px;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .invoice-content .invoice-desk .front-board .input {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .invoice-content .invoice-desk .front-board .img-upload img {
   width: 100px;
-  height: 100px; }
+  height: 100px;
+}
 
 .invoice-content .invoice-desk .front-board .img-upload .div-upload {
-  padding: 10px; }
+  padding: 10px;
+}
 
 .invoice-content .invoice-desk .front-board .img-upload .div-upload input {
   position: absolute;
   width: 179px;
   height: 120px;
-  opacity: 0; }
+  opacity: 0;
+}
 
 .invoice-content .invoice-desk .front-board .img-upload .div-upload:hover {
-  border: 2px dashed #d7d7d9; }
+  border: 2px dashed #d7d7d9;
+}
 
 .invoice-content .invoice-desk .front-board .textarea-part {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .invoice-content .invoice-desk .front-board .textarea-part textarea {
   width: 91%;
@@ -132,7 +157,8 @@
   font-size: 14px;
   padding: 10px;
   color: #a1a1a1;
-  resize: vertical; }
+  resize: vertical;
+}
 
 .invoice-content .invoice-desk .front-board .inline-block span {
   cursor: pointer;
@@ -148,7 +174,8 @@
   margin-top: 4px;
   text-align: center;
   border: 2px solid #d7d7d9;
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 ::ng-deep .invoice-content .description .mat-button-wrapper {
   cursor: pointer;
@@ -164,10 +191,12 @@
   margin-top: 4px;
   text-align: center;
   border: 2px solid #d7d7d9;
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 ::ng-deep .invoice-content .description .mat-form-field-infix {
-  display: none; }
+  display: none;
+}
 
 .invoice-content .description .indesc {
   position: absolute !important;
@@ -178,12 +207,13 @@
   left: 55px;
   color: #fff !important;
   background: rgba(43, 161, 225, 0.95) !important;
-  border: 1px solid #2BA1E1 !important;
+  border: 1px solid #2ba1e1 !important;
   border-radius: 2px !important;
   line-height: 20px !important;
   text-align: left !important;
   padding-left: 10px !important;
-  cursor: text !important; }
+  cursor: text !important;
+}
 
 .invoice-content .description .indesc p {
   display: inline-block;
@@ -197,36 +227,46 @@
   padding: 3px;
   border-radius: 10px;
   margin-left: 6px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 ::ng-deep .invoice-content .description .mat-form-field-subscript-wrapper {
-  display: none; }
+  display: none;
+}
 
 ::ng-deep .invoice-content .description .mat-form-field-underline {
-  display: none; }
+  display: none;
+}
 
 ::ng-deep .invoice-content .description .mat-button-focus-overlay {
-  background: none; }
+  background: none;
+}
 
 ::ng-deep .invoice-content .description .mat-form-field {
   float: left;
-  width: 50px; }
+  width: 50px;
+}
 
 .invoice-content .invoice-desk .front-board .inline-block .desc-bottom1 {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .invoice-content .invoice-desk .front-board .inline-block .desc-bottom2 {
   float: right;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .invoice-content .invoice-desk .front-board .form_row_invoice {
   height: 54px;
-  margin-top: 40px; }
+  margin-top: 40px;
+}
 
 .invoice-content .invoice-desk .front-board .form_row_invoice .form_heading {
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
   font-weight: 400;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .invoice-content .invoice-desk .front-board .form_row_invoice .input_addon {
   font-size: 15px;
@@ -245,9 +285,14 @@
   border: 2px solid #d7d7d9;
   border-radius: 2px 0 0 2px;
   -webkit-border-radius: 2px 0 0 2px;
-  -moz-border-radius: 2px 0 0 2px; }
+  -moz-border-radius: 2px 0 0 2px;
+}
 
-.invoice-content .invoice-desk .front-board .form_row_invoice .no_border_radius_left {
+.invoice-content
+  .invoice-desk
+  .front-board
+  .form_row_invoice
+  .no_border_radius_left {
   padding: 0 5px;
   outline: none;
   font-weight: 400;
@@ -258,94 +303,208 @@
   border-radius: 2px;
   background: #fff;
   border: 2px solid #d7d7d9;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
   font-size: 14px;
-  color: #333333; }
+  color: #333333;
+}
 
 .invoice-content .invoice-desk .second-board {
   padding-bottom: 40px;
-  border-bottom: 1px solid #E7E7E7; }
+  border-bottom: 1px solid #e7e7e7;
+}
 
 .invoice-content .invoice-desk .third-board {
   border-bottom: 1px solid #e7e7e7;
   padding: 20px 0;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+}
 
 .invoice-content .invoice-desk .third-board .account-data .to {
-  display: block; }
+  display: block;
+}
 
 .invoice-content .invoice-desk .third-board .account-data .from {
   display: inline-block;
   float: left;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .invoice-content .invoice-desk .third-board .account-data a {
   color: #2676a5;
   font-size: 14px;
   text-decoration: none;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
-  font-weight: 400; }
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
+  font-weight: 400;
+}
+.sub-total mat-toolbar-row {
+  background: #fff;
+  border-bottom: 1px solid #e7e7e7;
+}
+.sub-total .total-balance {
+  border: 3px solid;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border-left-width: 82px;
+  border-color: #a1a1a1;
+}
+.sub-total a {
+  text-decoration: none;
+  color: #2676a5;
+}
+.sub-total a.attach-icon:hover mat-icon,
+.sub-total a.attach-icon:hover i {
+  color: #333;
+  background: #d7d7d9;
+}
+.sub-total mat-icon,
+.sub-total i {
+  background: #f3f3f4;
+  padding: 5px;
+  color: #666;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 6px 0 0 6px;
+  border: 2px solid #d7d7d9;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
 
+.invoice-note {
+  /* border-bottom: 1px solid #e7e7e7; */
+  margin: 35px 0;
+}
+.invoice-note a {
+  text-decoration: none;
+  color: #2676a5;
+}
+.sub-total .total-balance .balance-usd {
+  margin-left: 29px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.sub-total .total-balance .balance {
+  font-size: 12px;
+  margin-left: -70px;
+  color: #fff;
+}
 .invoice-content .invoice-desk .third-board .edit_profile a {
   color: #2676a5;
   font-size: 14px;
   text-decoration: none;
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
   font-weight: 400;
-  margin-top: 5px; }
+  margin-top: 5px;
+}
+.example-icon {
+  padding: 0 14px;
+}
 
+.example-spacer {
+  flex: 1 1 auto;
+}
+.invoice-content .invoice-desk .third-board .edit_profile mat-form-field {
+  width: 100%;
+}
 .invoice-content .invoice-desk .third-board .account-data .width100 {
-  width: 100%; }
+  width: 100%;
+}
 
 .width100 {
-  padding: 0 10px; }
+  padding: 0 10px;
+}
 
 .header-drop-menu {
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .invoice-content .invoice-desk .third-board .account-data .to {
-  margin: 6px 0; }
+  margin: 6px 0;
+}
 
 .invoice-content .invoice-desk .third-board .right-third-board label {
   line-height: 1;
   margin-bottom: 10px;
-  font-family: "pn-sb", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif; }
-
+  font-family: 'pn-sb', 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
+}
+.invoice-content .invoice-desk .third-board .right-third-board mat-form-field {
+  width: 100%;
+}
+.invoice-content
+  .invoice-desk
+  .third-board
+  .right-third-board
+  .purchase-number {
+  padding: 0;
+  width: 100%;
+}
 .invoice-content .invoice-desk .fourteen-board label {
-  display: block; }
+  display: block;
+}
 
 .invoice-content .invoice-desk .fourteen-board .line-options .settings {
   padding: 3px 5px;
   display: inline-block;
   background: #f3f3f4;
-  border: 3px solid #e7e7e7; }
-
+  border: 3px solid #e7e7e7;
+}
+.default-footer {
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: 1px solid #e7e7e7;
+}
+.default-footer button {
+  background: #747d9d;
+  border: none;
+  line-height: 18px;
+  padding: 6px 10px;
+  height: 35px;
+  font-size: 14px;
+  color: #fff;
+}
+.default-footer a {
+  text-decoration: none;
+  color: #2676a5;
+}
 .invoice-content .invoice-desk .fourteen-board .line-options input {
   position: relative;
-  padding-left: 40px; }
+  padding-left: 40px;
+}
 
 .invoice-content .invoice-desk .fourteen-board .line-options .curency-val {
   position: absolute;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .invoice-content .invoice-desk .fourteen-board .line-options label {
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
   font-weight: 400;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 .invoice-content .invoice-desk .fourteen-board .description label {
-  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  font-family: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial,
+    sans-serif;
   font-weight: 400;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 .invoice-content .invoice-desk .fourteen-board .line-options .mat-form-field {
-  display: block; }
+  display: block;
+}
 
 .invoice-content .invoice-desk .fourteen-board {
   padding: 30px 0;
   border-bottom: 1px solid #e7e7e7;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 .new_line {
   padding: 8px;
@@ -353,7 +512,8 @@
   cursor: pointer;
   border-radius: 3px;
   color: #fff;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .link-drop-menu {
   padding: 10px !important;
@@ -362,11 +522,13 @@
   background: #fff;
   box-shadow: 0 2px 8px 0 rgba(75, 75, 87, 0.2);
   border: 2px solid #c1c1c1;
-  text-align: left; }
+  text-align: left;
+}
 
 .link-drop-menu label {
   font-weight: bold;
-  font-size: 14px !important; }
+  font-size: 14px !important;
+}
 
 .link-drop-menu .form_row span {
   padding: 2px 10px 0;
@@ -378,19 +540,23 @@
   cursor: pointer;
   border-radius: 3px;
   line-height: 25px;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 ::ng-deep .link-drop-menu .mat-form-field-underline {
-  display: none; }
+  display: none;
+}
 
 ::ng-deep .link-drop-menu .mat-form-field-infix {
   border: 2px solid #d7d7d9;
-  margin-top: 15px; }
+  margin-top: 15px;
+}
 
 .invoice-content .description .linkaddress {
   position: absolute !important;
   left: 57px;
   width: 170px !important;
-  border-radius: 3px !important; }
+  border-radius: 3px !important;
+}
 
 /*# sourceMappingURL=invoice-new.component.css.map */

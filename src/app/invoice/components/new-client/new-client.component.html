@@ -1,0 +1,89 @@
+<div class="new-client">
+  <div class="new-client-top">
+    <mat-toolbar>New Client</mat-toolbar>
+    <span class="close">X</span>
+  </div>
+  <div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="new-client-img" fxFlex="30">
+        <img src="/assets/img/individual.png" alt="individual.png" />
+      </div>
+      <div fxFlex="70" fxLayout="column">
+        <mat-checkbox>Individual</mat-checkbox>
+        <mat-checkbox>Organization</mat-checkbox>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" />
+      </mat-form-field>
+    </div>
+    <div fxLayout="column">
+      <h4>Currency</h4>
+      <mat-form-field>
+        <select matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <div>
+      <h4>Language</h4>
+      <mat-form-field class="example-full-width">
+        <select matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <div>
+      <h4>Email Address</h4>
+      <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Favorite food" />
+      </mat-form-field>
+    </div>
+    <div>
+      <h4>Phone Number</h4>
+      <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Favorite food" />
+      </mat-form-field>
+    </div>
+    <div>
+      <h4>Address</h4>
+      <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Street Line 1" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Street Line 2" />
+      </mat-form-field>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" placeholder="CIty" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" placeholder="State" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" placeholder="Postal Code" />
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <select matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <button>Save & Return</button> <button>Cancel</button>
+  </div>
+</div>

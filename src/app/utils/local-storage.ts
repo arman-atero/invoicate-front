@@ -4,8 +4,7 @@
  * @returns {any}
  */
 
-
-import {appConfig} from './app.config';
+import { appConfig } from './app.config';
 
 export function getFromLocalStorage(key: string): any {
   const value = localStorage.getItem(key);
@@ -16,48 +15,50 @@ export function getFromLocalStorage(key: string): any {
   }
 }
 
-export function getDashboardLink(): any {
-  let userType = getUserType();
-  if (userType === 'vendor') {
-    return '/partner';
-  } else if (userType === 'adminAdvocate' || userType == "advocate") {
-    return '/advocate';
-  } else if (userType === 'expert') {
-    return '/experts';
-  }
-}
+// export function getDashboardLink(): any {
+//   const userType = getUserType();
+//   if (userType === 'vendor') {
+//     return '/partner';
+//   } else if (userType === 'adminAdvocate' || userType === 'advocate') {
+//     return '/advocate';
+//   } else if (userType === 'expert') {
+//     return '/experts';
+//   }
+// }
 
 export function getImage(img): any {
-  if(img){
-  return appConfig.imagesUrl + img;
-  }else{
-    return "/assets/img/patient.png";
+  if (img) {
+    return appConfig.imagesUrl + img;
+  } else {
+    return '/assets/img/patient.png';
   }
 }
 
-export function getUserType(): any {
-  let user = getFromLocalStorage("user");
-  let UserTypeID = user.UserTypeID;
-  switch (UserTypeID){
-    case "1":
-    return "admin";break;
-    case "2":
-    if(user.IsAdminAdvocate == "1"){
-      return "adminAdvocate";
-    }else if(user.IsAdvocate == "1"){
-      return "advocate";
-    }else{
-    return "expert";
-    }
-    break;
-    case "4":
-    return "vendor";break;
-  }
-}
+// export function getUserType(): any {
+//   const user = getFromLocalStorage('user');
+//   const UserTypeID = user.UserTypeID;
+//   switch (UserTypeID) {
+//     case '1':
+//       return 'admin';
+//       break;
+//     case '2':
+//       if (user.IsAdminAdvocate === '1') {
+//         return 'adminAdvocate';
+//       } else if (user.IsAdvocate === '1') {
+//         return 'advocate';
+//       } else {
+//         return 'expert';
+//       }
+//       break;
+//     case '4':
+//       return 'vendor';
+//       break;
+//   }
+// }
 
 /**
  * Removes key with value from storage
- * @param {string} key
+ * //@param { string } key
  */
 export function removeFromLocalStorage(key: string | string[]) {
   key = Array.isArray(key) ? key : [key];
@@ -66,8 +67,8 @@ export function removeFromLocalStorage(key: string | string[]) {
 
 /**
  * Sets the key to storage with given values
- * @param {string} key will be saved in local storage
- * @param data
+//  * @param {string} key will be saved in local storage
+//  * @param data
  */
 export function setToLocalStorage(key: string, data: any): void {
   try {

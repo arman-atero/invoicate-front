@@ -2,135 +2,193 @@
   <div class="register-title text-center">
     <h2>invoicely</h2>
     <p>Free, Unlimited Invoicing</p>
-    <span>Thank you for choosing invoicely. You're just a few steps away from unlimited invoicing.</span>
+    <span
+      >Thank you for choosing invoicely. You're just a few steps away from
+      unlimited invoicing.</span
+    >
   </div>
   <div class="register-signup">
-    <mat-horizontal-stepper labelPosition="center" linear #stepper>
-      <mat-step [stepControl]="firstFormGroup" fxLayout="column">
-        <div class="set-up register-form">
-          <h2 class="text-center">Sign Up</h2>
-          <form #f="ngForm" [formGroup]="firstFormGroup" (ngSubmit)="registerForm(firstFormGroup, f.valid)">
-            <ng-template matStepLabel>Sign Up</ng-template>
-            <mat-form-field class="example-full-width">
-              <label>Email Address*</label>
-              <input matInput formControlName="emailAddress">
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <label>Password*</label>
-              <input matInput type="password" formControlName="pass">
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <label>Password(confirm)*</label>
-              <input matInput type="password" formControlName="passConfirm">
-            </mat-form-field>
-            <div class="term-use">
-              <p class="text-center">By proceeding you agree to the 
-                <a href="" target="_blank">Terms of Use</a> and 
-                <a href="" target="_blank">Privacy Policy</a></p>
+    <form [formGroup]="generalForm">
+      <mat-horizontal-stepper labelPosition="center" linear #stepper>
+        <mat-step
+          [stepControl]="generalForm.controls['firstFormGroup']"
+          fxLayout="column"
+        >
+          <div class="set-up register-form">
+            <h2 class="text-center">Sign Up</h2>
+            <div formGroupName="firstFormGroup">
+              <ng-template matStepLabel>Sign Up</ng-template>
+              <mat-form-field class="example-full-width">
+                <label>Email Address*</label>
+                <input
+                  #emailAdd
+                  (blur)="checkEmail(emailAdd.value)"
+                  matInput
+                  formControlName="emailAddress"
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <label>Password*</label>
+                <input
+                  matInput
+                  minlength="6"
+                  type="password"
+                  formControlName="pass"
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <label>Password(confirm)*</label>
+                <input
+                  matInput
+                  type="password"
+                  minlength="6"
+                  formControlName="passConfirm"
+                />
+              </mat-form-field>
+              <div class="term-use">
+                <p class="text-center">
+                  By proceeding you agree to the
+                  <a href="" target="_blank">Terms of Use</a> and
+                  <a href="" target="_blank">Privacy Policy</a>
+                </p>
+              </div>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <p class="error" *ngIf="emailExist">Email is Repeat</p>
+                <button
+                  class="next"
+                  [disabled]="!generalForm.controls['firstFormGroup'].valid"
+                  mat-button
+                  matStepperNext
+                  *ngIf="!emailExist"
+                  (click)="
+                    passValidator(generalForm.controls['firstFormGroup'])
+                  "
+                >
+                  Proceed
+                </button>
+              </div>
             </div>
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <button class="next" [disabled]="!firstFormGroup.valid" mat-button matStepperNext>Proceed</button>
-            </div>
-          </form>
           </div>
           <div class="already-member text-center">
-              <p><i>Already a member?</i></p>
-              <button routerLink="/login">Login</button>
+            <p><i>Already a member?</i></p>
+            <button routerLink="/login">Login</button>
           </div>
-          
-      </mat-step>
-      <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
-        <div class="register-form">
-          <h2 class="text-center">Tell us about you</h2>
-          <form [formGroup]="secondFormGroup">
-            <ng-template matStepLabel>Account</ng-template>
-            <div fxLayout="row">
-              <div class="register-left" fxFlex="68">
-                <div class="register-private">
-                  <mat-form-field class="register-form-field">
-                    <label>First Name*</label>
-                    <input matInput formControlName="firstName" required>
+        </mat-step>
+        <mat-step
+          [stepControl]="generalForm.controls['secondFormGroup']"
+          [optional]="isOptional"
+        >
+          <div class="register-form">
+            <h2 class="text-center">Tell us about you</h2>
+            <div formGroupName="secondFormGroup">
+              <ng-template matStepLabel>Account</ng-template>
+              <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+                <div class="register-left" fxFlex="68">
+                  <div class="register-private">
+                    <mat-form-field class="register-form-field">
+                      <label>First Name*</label>
+                      <input matInput formControlName="firstName" required />
+                    </mat-form-field>
+                    <mat-form-field>
+                      <label>Last Name*</label>
+                      <input matInput formControlName="lastName" required />
+                    </mat-form-field>
+                  </div>
+                  <mat-form-field class="example-full-width">
+                    <label>Address*</label>
+                    <input matInput formControlName="address" required />
                   </mat-form-field>
-                  <mat-form-field>
-                    <label>Last Name*</label>
-                    <input matInput formControlName="lastName" required>
-                  </mat-form-field>
+                  <div class="register-private">
+                    <mat-form-field class="register-form-field">
+                      <label>Postal Code*</label>
+                      <input matInput formControlName="postalCode" required />
+                    </mat-form-field>
+                    <mat-form-field>
+                      <label>State</label>
+                      <input matInput formControlName="state" />
+                    </mat-form-field>
+                  </div>
+                  <div class="register-private">
+                    <mat-form-field class="register-form-field">
+                      <label>City*</label>
+                      <input matInput formControlName="city" required />
+                    </mat-form-field>
+                    <mat-form-field>
+                      <label>Country*</label>
+                      <mat-select
+                        [(value)]="selected"
+                        formControlName="country"
+                        required
+                      >
+                        <mat-option value="select">Select</mat-option>
+                        <mat-option
+                          *ngFor="let state of states"
+                          [value]="state"
+                          >{{ state }}</mat-option
+                        >
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
                 </div>
-                <mat-form-field class="example-full-width">
-                  <label>Address*</label>
-                  <input matInput formControlName="address" required>
-                </mat-form-field>
-                <div class="register-private">
-                  <mat-form-field class="register-form-field">
-                    <label>Postal Code*</label>
-                    <input matInput formControlName="postalCode" required>
+                <div fxFlex="30">
+                  <mat-form-field class="example-full-width">
+                    <label>Company Name</label>
+                    <input matInput formControlName="companyName" />
                   </mat-form-field>
-                  <mat-form-field>
-                    <label>State</label>
-                    <input matInput formControlName="state">
+                  <mat-form-field class="example-full-width">
+                    <label>Website URL</label>
+                    <input matInput formControlName="websiteUrl" />
                   </mat-form-field>
-                </div>
-                <div class="register-private">
-                  <mat-form-field class="register-form-field">
-                    <label>City*</label>
-                    <input matInput formControlName="city" required>
-                  </mat-form-field>
-                  <mat-form-field>
-                    <label>Country*</label>
-                    <mat-select [(value)]="selected" formControlName="country" required>
-                      <mat-option value="selecte">Select</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
-                    </mat-select>
+                  <mat-form-field class="example-full-width">
+                    <label>Tax ID or VAT Number</label>
+                    <input matInput formControlName="taxIdNumber" />
                   </mat-form-field>
                 </div>
               </div>
-              <div fxFlex="30">
-                <mat-form-field class="example-full-width">
-                  <label>Company Name</label>
-                  <input matInput formControlName="companyName">
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                  <label>Website URL</label>
-                  <input matInput formControlName="websiteUrl">
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                  <label>Tax ID or VAT Number</label>
-                  <input matInput formControlName="taxIdNumber">
-                </mat-form-field>
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-button class="back" matStepperPrevious>Back</button>
+                <button
+                  class="next"
+                  [disabled]="!generalForm.controls['secondFormGroup'].valid"
+                  mat-button
+                  matStepperNext
+                >
+                  Proceed
+                </button>
               </div>
             </div>
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-              <button mat-button class="back" matStepperPrevious>Back</button>
-              <button class="next" mat-button matStepperNext>Proceed</button>
+          </div>
+        </mat-step>
+        <mat-step class="" [stepControl]="generalForm.controls['endFormGroup']">
+          <div class="set-up register-form">
+            <h2 class="text-center">Set Up your Business</h2>
+            <div formGroupName="endFormGroup">
+              <mat-form-field class="example-full-width">
+                <label>Business Name</label>
+                <input matInput formControlName="businnesName" />
+              </mat-form-field>
+              <mat-checkbox>I'm an individual.</mat-checkbox>
+              <mat-form-field class="example-full-width">
+                <label>Vanity URL</label>
+                <input matInput formControlName="vanityUrl" />
+              </mat-form-field>
+              <ng-template matStepLabel>Business</ng-template>
+              You are now done.
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <button class="back" mat-button matStepperPrevious>Back</button>
+                <button
+                  mat-button
+                  class="next"
+                  [disabled]="!generalForm.controls['endFormGroup'].valid"
+                  (click)="registerUser(generalForm)"
+                >
+                  Start Using invoicely
+                </button>
+              </div>
             </div>
-          </form>
-        </div>
-      </mat-step>
-      <mat-step class="" [stepControl]="endFormGroup">
-        <div class="set-up register-form">
-          <h2 class="text-center">Set Up your Business</h2>
-          <form [formGroup]="endFormGroup">
-            <mat-form-field class="example-full-width">
-              <label>Business Name</label>
-              <input matInput formControlName="businnesName">
-            </mat-form-field>
-            <mat-checkbox>I'm an individual.</mat-checkbox>
-            <mat-form-field class="example-full-width">
-              <label>Vanity URL</label>
-              <input matInput formControlName="vanityUrl">
-            </mat-form-field>
-            <ng-template matStepLabel>Business</ng-template>
-            You are now done.
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-              <button class="back" mat-button matStepperPrevious>Back</button>
-              <button mat-button class="next">Start Using invoicely</button>
-            </div>
-          </form>
-        </div>
-      </mat-step>
-    </mat-horizontal-stepper>
-
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </form>
   </div>
 </div>

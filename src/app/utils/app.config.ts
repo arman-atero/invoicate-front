@@ -1,10 +1,10 @@
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 
 export const appConfig = {
-  apiUrl:'/Invocate',
-  apiOauth:'/Invocate',
-  serverUrl:'/Invocate',
-  imagesUrl:'/Invocate',
+  apiUrl: '/Invocate',
+  apiOauth: '/Invocate',
+  serverUrl: '/Invocate',
+  imagesUrl: '/Invocate'
 };
 
 export const allowedImageType = [
@@ -50,7 +50,6 @@ export interface DateInfo {
   timezone_type: number;
   timezone: string;
 }
-
 
 export function isNumeric(n: any) {
   return !isNaN(parseFloat(n)) && isFinite(n);
