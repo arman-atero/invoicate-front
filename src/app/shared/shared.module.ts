@@ -11,6 +11,7 @@ import {
   MatListModule,
   MatDatepickerModule,
   MatTooltipModule,
+  MatCheckboxModule
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
@@ -31,7 +32,8 @@ import { MomentModule } from 'ngx-moment';
     FlexLayoutModule,
     RouterModule,
     MatTooltipModule,
-    MomentModule
+    MomentModule,
+    MatCheckboxModule
   ],
   declarations: [
     SidebarComponent
@@ -50,7 +52,8 @@ import { MomentModule } from 'ngx-moment';
     FlexLayoutModule,
     RouterModule,
     MatTooltipModule,
-    MomentModule
+    MomentModule,
+    MatCheckboxModule
   ]
 })
 

@@ -8,19 +8,33 @@
     position: relative;
     .close {
       position: absolute;
+      cursor: pointer;
       right: 15px;
       top: 25%;
     }
-    .new-client-img {
-      text-align: center;
-      img {
-        height: 80px;
-        width: 80px;
-      }
+  }
+  .new-client-img {
+    img {
+      height: 80px;
+      width: 80px;
     }
   }
 }
-
+.danger {
+  display: none;
+}
+.save {
+  padding: 0 15px;
+  height: 35px;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  background: #747d9d;
+}
 .example-full-width {
   width: 100%;
 }

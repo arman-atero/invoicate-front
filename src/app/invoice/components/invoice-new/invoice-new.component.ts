@@ -56,6 +56,9 @@ export class InvoiceNewComponent implements OnInit {
     public dialog: MatDialog
   ) {}
 
+  //   private invoiceService: InvoiceService {
+  // }
+
   ngOnInit() {
     this.newInvoiceForm = this.fb.group({
       title: ['', Validators.required],
@@ -68,11 +71,18 @@ export class InvoiceNewComponent implements OnInit {
       datepicker: ['', Validators.required],
       invoicedue: ['', Validators.required],
       purchase: [''],
-
       items: this.fb.array([this.createItem()])
+      // items: this.fb.array([this.createItem()]),
+      // items: this.fb.array([ this.createLink() ])
     });
   }
 
+  // createLink(): FormGroup {
+  //   return this.fb.group({
+  //     link:         ['', Validators.required],
+  //     address:      ['', Validators.required],
+  //   });
+  // }
   createItem(): FormGroup {
     return this.fb.group({
       descriptions: [''],
@@ -81,7 +91,8 @@ export class InvoiceNewComponent implements OnInit {
       amount: ['', Validators.required],
       datTime: [''],
       link: ['', Validators.required],
-      address: ['', Validators.required]
+      address: ['', Validators.required],
+      tag: ['', Validators.required]
     });
   }
 
@@ -100,6 +111,7 @@ export class InvoiceNewComponent implements OnInit {
     }
   }
   onSelectFile(event) {
+    // called each time file input changes
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();
 
@@ -117,6 +129,7 @@ export class InvoiceNewComponent implements OnInit {
   deleteItem(i) {
     this.items.removeAt(i);
   }
+
   stopPropagation(event) {
     event.stopPropagation();
   }

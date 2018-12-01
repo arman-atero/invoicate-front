@@ -275,6 +275,13 @@
                       value="{{item.controls['link'].value}}{{item.controls['address'].value}}"
                     >
                     </textarea>
+                    <textarea
+                      formControlName="descriptions"
+                      ng-model="myTextarea"
+                      placeholder="Item name & Description"
+                      value="{{item.controls['link'].value}}{{item.controls['address'].value}}"
+                    >
+                    </textarea>
                     <span class="indesc" *ngIf="item.controls['datTime'].value"
                       >{{
                         item.controls['datTime'].value
@@ -289,58 +296,86 @@
                       <!-- <span matTooltip="Date"> -->
                       <!-- <mat-icon>date_range</mat-icon> -->
                       <!-- </span> -->
-                      <mat-form-field>
-                        <input
-                          matInput
-                          [matDatepicker]="picker"
-                          formControlName="datTime"
-                          placeholder="Choose a date"
-                        />
-                        <mat-datepicker-toggle
-                          matSuffix
-                          [for]="picker"
-                        ></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
-                      <span
-                        mat-icon-button
-                        [matMenuTriggerFor]="menulink"
-                        matTooltip="Link"
-                      >
-                        <mat-icon>link</mat-icon>
+                      <span class="indesctag" *ngIf="item.controls['tag'].value"
+                        >{{ item.controls['tag'].value }}
+                        <p (click)="item.controls['tag'].value = ''">x</p>
                       </span>
-                      <mat-menu #menulink="matMenu">
-                        <ul class="link-drop-menu" style="padding: 0;">
-                          <li>
-                            <label>Text To Display</label>
-                            <mat-form-field class="example-full-width">
-                              <input
-                                (click)="stopPropagation($event)"
-                                formControlName="link"
-                                matInput
-                                placeholder="This is a link"
-                              />
-                            </mat-form-field>
-                          </li>
-                          <li>
-                            <label>Link URL</label>
-                            <mat-form-field class="example-full-width">
-                              <input
-                                (click)="stopPropagation($event)"
-                                formControlName="address"
-                                matInput
-                                placeholder="http://"
-                              />
-                            </mat-form-field>
-                          </li>
-                          <div class="form_row" style="margin-top: 14px;">
-                            <span>Add Link</span>
-                          </div>
-                        </ul>
-                      </mat-menu>
-                      <span matTooltip="Tag">
-                        <mat-icon>how_to_vote</mat-icon>
-                      </span>
+                      <div class="desc-bottom1">
+                        <mat-form-field>
+                          <input
+                            matInput
+                            [matDatepicker]="picker"
+                            formControlName="datTime"
+                            placeholder="Choose a date"
+                          />
+                          <mat-datepicker-toggle
+                            matSuffix
+                            [for]="picker"
+                          ></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <span
+                          mat-icon-button
+                          [matMenuTriggerFor]="menulink"
+                          matTooltip="Link"
+                        >
+                        </span>
+                        <span mat-icon-button [matMenuTriggerFor]="menulink">
+                          <mat-icon>link</mat-icon>
+                        </span>
+                        <mat-menu #menulink="matMenu">
+                          <ul class="link-drop-menu" style="padding: 0;">
+                            <li>
+                              <label>Text To Display</label>
+                              <mat-form-field class="example-full-width">
+                                <input
+                                  (click)="stopPropagation($event)"
+                                  formControlName="link"
+                                  matInput
+                                  placeholder="This is a link"
+                                />
+                              </mat-form-field>
+                            </li>
+                            <li>
+                              <label>Link URL</label>
+                              <mat-form-field class="example-full-width">
+                                <input
+                                  (click)="stopPropagation($event)"
+                                  formControlName="address"
+                                  matInput
+                                  placeholder="http://"
+                                />
+                              </mat-form-field>
+                            </li>
+                            <div class="form_row" style="margin-top: 14px;">
+                              <span>Add Link</span>
+                            </div>
+                          </ul>
+                        </mat-menu>
+                        <span mat-icon-button [matMenuTriggerFor]="menutag">
+                          <mat-icon>how_to_vote</mat-icon>
+                        </span>
+                        <mat-menu #menutag="matMenu">
+                          <ul class="link-drop-menu" style="padding: 0;">
+                            <li>
+                              <mat-form-field class="example-full-width">
+                                <input
+                                  (click)="stopPropagation($event)"
+                                  formControlName="tag"
+                                  matInput
+                                  placeholder="Tag Name"
+                                />
+                              </mat-form-field>
+                            </li>
+                            <mat-checkbox (click)="stopPropagation($event)"
+                              >Remember</mat-checkbox
+                            >
+                            <div class="form_row" style="margin-top: 14px;">
+                              <span>Add</span>
+                            </div>
+                          </ul>
+                        </mat-menu>
+                      </div>
                     </div>
                     <div class="desc-bottom2">
                       <span matTooltip="Tax">

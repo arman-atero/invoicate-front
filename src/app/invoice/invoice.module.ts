@@ -11,6 +11,7 @@ import { NewClientComponent } from './components/new-client/new-client.component
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatToolbarModule,
     MatDialogModule,
     MatCheckboxModule,
+    MatRadioModule,
     MatSelectModule,
     MatInputModule,
     SharedModule
